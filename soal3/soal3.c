@@ -22,11 +22,11 @@ int main()
 	//perintah unzip
         char *unzp[5] = {"unzip", "/home/bastian/campur2.zip", "-d",  "/home/bastian/modul2", NULL};
 	//init pipe
-        int p[2];
+        int pip[2];
 	//init touch
         char *sentuh[3] = {"touch", "daftar.txt", NULL};
 	//piping
-        pipe(p);
+        pipe(pip);
 	//tunggu
         int tunggu;
 	//init fork
@@ -68,8 +68,8 @@ int main()
 				//tunggu unzip
 				while((wait(&tunggu1))>0);
 				//piping ls grep
-				dup2(p[1], 1);
-                                close(p[0]);
+				dup2(pip[1], 1);
+                                close(pip[0]);
 				//jalanin ls
                                 execvp("ls", ls);
 			}
@@ -85,8 +85,8 @@ int main()
 				//print grep ke daftar.txt
 				dup2(cetak,1);
 				//piping ls grep
-                 		dup2(p[0], 0);
-                 		close(p[1]);
+                 		dup2(pip[0], 0);
+                 		close(pip[1]);
 				//jalanin grep
                  		execvp("grep", grep);
 			}
