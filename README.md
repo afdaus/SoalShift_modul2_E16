@@ -3,8 +3,11 @@
 Pertama-tama, kita menggunakan function directory pada c untuk menangkap file-file yang satu folder dengan file kodingan ini. 
 
 Struct dirent *dir berarti sebagai pointer untuk directory entry. 
+
 d = opendir("."); digunakan untuk menangkap file, jika ditemukan, maka akan masuk ke loop.
+
 Selanjutnya, jika sebuah file ditemukan, saya memasukkan file tersebut ke dalam array bernama fsumber menggunakan fungsi strcpy. Lalu saya cari panjang array dari fsumber dengan menggunakan fungsi strlen. Hasil tersebut saya masukkan ke dalam variabel len. Lalu len saya kurangi 4 agar dapat mengetahui indeks ke berapakah untuk menangkap 4 string terakhir dalam sebuah char. Setelah itu saya membuat loop untuk memasukkan array indeks ke len-4 sampai dengan len ke dalam char bernama temp1. Jadi isi dari temp1 adalah 4 karakter terakhir dari nama file fsumber. Selanjutnya saya akan cek apakah isi dari temp1 adalah ‘.png’ atau bukan. Jika iya, maka akan masuk ke dalam fungsi dalam if, sedangkan jika bukan ‘.png’ tidak akan me return apa-apa dan mengulang loop dari awal.
+
 Dalam fungsi if tersebut, saya membuat loop untuk mengambil nama file depan yang tidak diikuti ‘.png’ nya. Jadi misal jika ada file bernama lalala.png maka loop tersebut hanya mengambil lalala nya saja dan dimasukkan ke char bernama temp. Selanjutnya saya sudah memiliki char bernama grey yang berisi ‘_grey’. Lalu saya hanya tinggal menggabungkan char temp, grey, dan temp1 dan saya masukkan hasil itu ke dalam char bernama temp2. Maka file lalala.png akan menjadi lalala_grey.png. Setelah itu saya membuat char bernama alamat yang berisi ‘/home/samuel/modul2/gambar/’. Lalu saya akan menambahkan temp2 ke belakang char alamat dengan menggunakan funsgi strcat dan memasukkan hasilnya ke dalam char bernama temp3. Terakhir, saya hanya membuat fungsi rename dari fsumber ke temp3. Fungsi rename mirip dengan fungsi mv. Karena dalam temp3 sudah ada direktori tujuannya, otomatis file .png yang berada 1 folder dengan file kodingannya akan otomatis pindah ke /home/samuel/modul2/gambar/temp3. 
 
 # SOAL 2
