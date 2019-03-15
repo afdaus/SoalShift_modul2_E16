@@ -16,15 +16,15 @@ Di soal ini kita diharapkan agar membuat file makan_sehat#.txt, dengan ketentuan
     `stat(dir, &sb);`
 3. Selanjutnya untuk mengetahui perbedaan waktu pada saat makan_enak.txt dibuka dan program ini berjalan kita tinggal memakai struct stat yang sebelumnya dideklarasikan ditambah 30 detik, jika waktunya masih lebih lama dari waktu program berjalan, maka file makan_sehat#.txt akan dibuat.
     `if(sb.st_atime + 30 > time(NULL))`
-    {
-      char new[100];
-      sprintf(new, "%d.txt", count);
+    `{`
+      `char new[100];`
+      `sprintf(new, "%d.txt", count);`
 
-      char dir2[]="/home/panda/Documents/makanan/makan_sehat";
-      strcat(dir2, new);
+      `char dir2[]="/home/panda/Documents/makanan/makan_sehat";`
+      `strcat(dir2, new);`
       
-      FILE *tmp = fopen(dir2, "w"); 
-      fclose(tmp);
-      count++;
-    }`
+      `FILE *tmp = fopen(dir2, "w");`
+      `fclose(tmp);`
+      `count++;`
+    `}`
 # SOAL 5
