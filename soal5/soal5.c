@@ -49,7 +49,7 @@ int main()
 		//ambil jam dari system
 		time_t jamskrg = time(NULL);
 		//simpen sesuai format
-        	strftime(simpen, 20, "%d-%m-%Y-%H:%M", localtime(&jamskrg));
+        	strftime(simpen, 20, "%d:%m:%Y-%H:%M", localtime(&jamskrg));
 		//ambil direktori
 		strcpy(simpen1,"/home/bastian/log/");
 		//totalin direktori
