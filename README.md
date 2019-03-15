@@ -20,7 +20,7 @@ di main, fork pertama dijalankan, sehingga menghasilkan child pertama dan parent
 # SOAL 4
 # SOAL 5
 Untuk menyelesaikan soal nomor 5, maka langkah-langkahnya sebagai berikut:
-A. Program C untuk mencatat log tiap menitnya
+1. Program C untuk mencatat log tiap menitnya
 - untuk menjalankan setiap menitnya, maka menggunakan daemon.
 - untuk membuat nama folder dengan waktu, maka dapat menggunakan fungsi untuk mengambil waktu pada c, yaitu `time_t &array_char = time(NULL);`
 - untuk merubah waktu menjadi format tertentu, maka dapat menggunakan `strftime(&array_char_lain, besar_array, "%d:%m:%Y-%H:%M", localtime(&array_char));`
@@ -29,4 +29,4 @@ A. Program C untuk mencatat log tiap menitnya
 - untuk mengedit sebuah string dengan format nama tertentu, dapat menggunakan fungsi sprintf.
 - untuk membuka atau membuat file, maka dapat menggunakan pointer FILE.
 Secara garis besar, untuk menyelesaikan soal nomor 5 ialah menggunakan fungsi time untuk mengambil waktu, kemudian waktu tersebut dirubah formatnya dengan fungsi strftime, kemudian waktu tersebut dibuat menjadi alamat sebuah direktori dengan fungsi strcat dan strcpy. Selanjutnya, membuat direktori dengan alamat yang sudah dibuat dengan mkdir, membuat loop sebanyak 30 kali, dimana di dalamnya digunakan sprintf untuk memformat sebuah string, lalu membuat file dengan nama string tersebut, membuka dan membaca log, mengcopy isi log tersebut ke file log yang baru. setelah itu, program berhenti selama 1 menit menggunakan fungsi sleep.
-B. untuk menghentikan program, maka dapat menggunakan fungsi `pkill [nama_program]` dijalankan dengan fungsi exec di dalam c.
+2. untuk menghentikan program, maka dapat menggunakan fungsi `pkill [nama_program]` dijalankan dengan fungsi exec di dalam c.
