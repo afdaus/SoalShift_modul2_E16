@@ -1,5 +1,5 @@
 # SoalShift_modul2_E16
-
+# Commit terbaru dilakukan atas permintaan asisten penguji, untuk menyelesaikan soal nomor 4 dengan cara yang berbeda
 # SOAL 1
 Pertama-tama, kita menggunakan function directory pada c untuk menangkap file-file yang satu folder dengan file kodingan ini. 
 
