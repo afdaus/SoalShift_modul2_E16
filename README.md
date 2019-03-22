@@ -35,7 +35,8 @@ Di soal ini kita diharapkan agar membuat file makan_sehat#.txt, dengan ketentuan
 2. Memakai struct stat untuk kemudian dipakai untuk mengetahui waktu(seconds).
 `struct stat sb;`
 `stat(dir, &sb);`
-3. Selanjutnya untuk mengetahui perbedaan waktu pada saat makan_enak.txt dibuka dan program ini berjalan kita tinggal memakai struct stat yang sebelumnya dideklarasikan ditambah 30 detik, jika waktunya masih lebih lama dari waktu program berjalan, maka file makan_sehat#.txt akan dibuat.
+3a. Salah satu cara untuk mengetahui perbedaan waktu pada saat makan_enak.txt dibuka dan program ini berjalan kita tinggal memakai struct stat yang sebelumnya dideklarasikan ditambah 30 detik, jika waktunya masih lebih lama dari waktu program berjalan, maka file makan_sehat#.txt akan dibuat. 
+3b. Cara yang satu lagi yaitu kita memakai fungsi yang disediakan oleh library time, fungsi yang kita pakai bernama difftime. Di fungsi ini terdapat 2 variabel, nanti akan dikurang variabel kiri dikurang variabel kanan, apabila perbedaannya masih kurang dari 30 detik, maka file makan sehat akan dibuat
 
 # SOAL 5
 Untuk menyelesaikan soal nomor 5, maka langkah-langkahnya sebagai berikut:
